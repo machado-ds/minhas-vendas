@@ -58,17 +58,44 @@
         app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_forma_pagamento_textview" />
 
     <TextView
-        android:id="@+id/activity_nova_venda_carrinho_troco_textview"
+        android:id="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Troco Devido"
+        android:text="Valor pago pelo cliente"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_forma_pagamento_textview"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_forma_pagamento_textview"
         app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_forma_pagamento_spinner" />
+
+    <EditText
+        android:id="@+id/activity_nova_venda_carrinho_valor_cliente_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="R$"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
+        app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview" />
+
+    <TextView
+        android:id="@+id/activity_nova_venda_carrinho_troco_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Troco devido"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/activity_nova_venda_carrinho_troco_edittext"
+        app:layout_constraintEnd_toEndOf="@id/activity_nova_venda_carrinho_valor_cliente_textview"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/activity_nova_venda_carrinho_valor_cliente_textview"
+        app:layout_constraintTop_toBottomOf="@id/activity_nova_venda_carrinho_valor_cliente_edittext" />
 
     <EditText
         android:id="@+id/activity_nova_venda_carrinho_troco_edittext"
@@ -78,10 +105,11 @@
         android:ems="10"
         android:hint="R$"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_troco_textview"
+        app:layout_constraintBottom_toTopOf="@id/activity_nova_venda_carrinho_data_textview"
+        app:layout_constraintEnd_toEndOf="@id/activity_nova_venda_carrinho_data_textview"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_troco_textview"
-        app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_troco_textview" />
+        app:layout_constraintStart_toStartOf="@id/activity_nova_venda_carrinho_troco_textview"
+        app:layout_constraintTop_toBottomOf="@id/activity_nova_venda_carrinho_troco_textview" />
 
     <TextView
         android:id="@+id/activity_nova_venda_carrinho_data_textview"
@@ -91,9 +119,9 @@
         android:text="Data da Venda"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_troco_textview"
+        app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_troco_textview"
+        app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
         app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_troco_edittext" />
 
     <Button
