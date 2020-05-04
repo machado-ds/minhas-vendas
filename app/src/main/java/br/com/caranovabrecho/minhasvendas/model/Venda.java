@@ -3,8 +3,9 @@ package br.com.caranovabrecho.minhasvendas.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import br.com.caranovabrecho.minhasvendas.util.DataUtil;
 
 @Entity
 public class Venda {
@@ -69,7 +70,6 @@ public class Venda {
     }
     
     public String getDataFormatada() {
-        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-        return formatador.format(data.getTime());
+        return DataUtil.getDataAtualFormatada();
     }
 }
