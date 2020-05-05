@@ -14,6 +14,7 @@ public class Venda {
     private Long id;
     private String tipoItem;
     private String valor;
+    private String quantidade;
     private FormaPagamento formaPagamento;
     private Calendar data;
     private Long cliente_id;
@@ -71,5 +72,13 @@ public class Venda {
     
     public String getDataFormatada() {
         return DataUtil.getDataAtualFormatada();
+    }
+
+    public String getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(String quantidade) {
+        this.quantidade = quantidade;
     }
 }
