@@ -13,8 +13,8 @@ public class Venda {
     @PrimaryKey(autoGenerate = true)
     private Long id;
     private String tipoItem;
-    private String valor;
-    private String quantidade;
+    private int valor;
+    private int quantidade;
     private FormaPagamento formaPagamento;
     private Calendar data;
     private Long cliente_id;
@@ -38,11 +38,11 @@ public class Venda {
         this.tipoItem = tipoItem;
     }
 
-    public String getValor() {
+    public int getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(int valor) {
         this.valor = valor;
     }
 
@@ -74,11 +74,11 @@ public class Venda {
         return DataUtil.getDataAtualFormatada();
     }
 
-    public String getQuantidade() {
+    public int getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
 }

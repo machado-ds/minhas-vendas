@@ -39,7 +39,7 @@ public class ListaVendasAdapter extends RecyclerView.Adapter {
         TextView tipoItem = holder.itemView.findViewById(R.id.item_venda_tipo);
         tipoItem.setText(venda.getTipoItem());
         TextView quantidadeItem = holder.itemView.findViewById(R.id.item_venda_quantidade);
-        quantidadeItem.setText(venda.getQuantidade());
+        quantidadeItem.setText(String.valueOf(venda.getQuantidade()));
         TextView valorItem = holder.itemView.findViewById(R.id.item_venda_valor);
         valorItem.setText(venda.getValor());
     }
