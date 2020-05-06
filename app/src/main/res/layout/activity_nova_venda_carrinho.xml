@@ -91,11 +91,12 @@
         android:text="Troco devido"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/activity_nova_venda_carrinho_troco_edittext"
+
         app:layout_constraintEnd_toEndOf="@id/activity_nova_venda_carrinho_valor_cliente_textview"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/activity_nova_venda_carrinho_valor_cliente_textview"
-        app:layout_constraintTop_toBottomOf="@id/activity_nova_venda_carrinho_valor_cliente_edittext" />
+        app:layout_constraintTop_toBottomOf="@id/activity_nova_venda_carrinho_valor_cliente_edittext"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/activity_nova_venda_carrinho_troco_edittext"
@@ -105,35 +106,12 @@
         android:ems="10"
         android:hint="R$"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@id/activity_nova_venda_carrinho_data_textview"
-        app:layout_constraintEnd_toEndOf="@id/activity_nova_venda_carrinho_data_textview"
+        app:layout_constraintBottom_toTopOf="@id/activity_nova_venda_carrinho_concluir_venda_botao"
+        app:layout_constraintEnd_toEndOf="@id/activity_nova_venda_carrinho_valor_cliente_edittext"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/activity_nova_venda_carrinho_troco_textview"
-        app:layout_constraintTop_toBottomOf="@id/activity_nova_venda_carrinho_troco_textview" />
-
-    <TextView
-        android:id="@+id/activity_nova_venda_carrinho_data_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Data da Venda"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_valor_cliente_textview"
-        app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_troco_edittext" />
-
-    <Button
-        android:id="@+id/activity_nova_venda_carrinho_preco_venda_botao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Escolher Data"
-        app:layout_constraintEnd_toEndOf="@+id/activity_nova_venda_carrinho_data_textview"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/activity_nova_venda_carrinho_data_textview"
-        app:layout_constraintTop_toBottomOf="@+id/activity_nova_venda_carrinho_data_textview" />
+        app:layout_constraintStart_toStartOf="@id/activity_nova_venda_carrinho_valor_cliente_edittext"
+        app:layout_constraintTop_toBottomOf="@id/activity_nova_venda_carrinho_troco_textview"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/activity_nova_venda_carrinho_concluir_venda_botao"
