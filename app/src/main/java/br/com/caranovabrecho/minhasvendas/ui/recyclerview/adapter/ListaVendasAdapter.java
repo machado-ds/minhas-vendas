@@ -34,14 +34,18 @@ public class ListaVendasAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        //Testando o bind com dados em memória (não está usando o Room)
         Venda venda = vendas.get(position);
+        configuraCardDeVenda(holder, venda);
+    }
+
+    private void configuraCardDeVenda(@NonNull RecyclerView.ViewHolder holder, Venda venda) {
         TextView tipoItem = holder.itemView.findViewById(R.id.item_venda_tipo);
         tipoItem.setText(venda.getTipoItem());
         TextView quantidadeItem = holder.itemView.findViewById(R.id.item_venda_quantidade);
         quantidadeItem.setText(String.valueOf(venda.getQuantidade()));
         TextView valorItem = holder.itemView.findViewById(R.id.item_venda_valor);
-        valorItem.setText(venda.getValor());
+        //Para incluir o cifrão antes do valor, preciso criar um String resource utilizando placeholder
+        valorItem.setText(String.valueOf(venda.getValor()));
     }
 
     @Override

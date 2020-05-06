@@ -21,21 +21,19 @@ import br.com.caranovabrecho.minhasvendas.util.DataUtil;
 
 public class ResumoDiaActivity extends AppCompatActivity {
 
-    private TextView dataCorrente;
-    private RoomVendaDAO roomVendaDAO;
-
+    private List<Venda> listaVendas;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_dia);
         setTitle("Resumo do dia");
-        dataCorrente = findViewById(R.id.activity_resumo_dia_data_textview);
-        dataCorrente.setText(DataUtil.getDataAtualFormatada());
+        configuraData();
+        configuraListaDeVendas();
+        configuraValorTotalDeVendasDoDia();
+    }
 
-        roomVendaDAO = MinhasVendasDatabase.getInstance(this).getRoomVendaDAO();
-        List<Venda> listaVendas = roomVendaDAO.vendasDoDia();
-        RecyclerView listaVendasView = findViewById(R.id.activity_resumo_dia_lista_vendas_recyclerview);
-        listaVendasView.setAdapter(new ListaVendasAdapter(this, listaVendas));
+    private void configuraValorTotalDeVendasDoDia() {
         TextView valorTotalVendasDoDiaView = findViewById(R.id.activity_resumo_dia_total_valor_textview);
         int valorTotalVendasDoDiaInt = 0;
         for (Venda venda : listaVendas) {
@@ -43,6 +41,17 @@ public class ResumoDiaActivity extends AppCompatActivity {
         }
         BigDecimal valorTotalVendasDoDiaBigInt = new BigDecimal(valorTotalVendasDoDiaInt / 100);
         valorTotalVendasDoDiaView.setText(String.valueOf(valorTotalVendasDoDiaBigInt));
+    }
 
+    private void configuraListaDeVendas() {
+        RoomVendaDAO roomVendaDAO = MinhasVendasDatabase.getInstance(this).getRoomVendaDAO();
+        listaVendas = roomVendaDAO.vendasDoDia();
+        RecyclerView listaVendasView = findViewById(R.id.activity_resumo_dia_lista_vendas_recyclerview);
+        listaVendasView.setAdapter(new ListaVendasAdapter(this, listaVendas));
+    }
+
+    private void configuraData() {
+        TextView dataCorrente = findViewById(R.id.activity_resumo_dia_data_textview);
+        dataCorrente.setText(DataUtil.getDataAtualFormatada());
     }
 }
