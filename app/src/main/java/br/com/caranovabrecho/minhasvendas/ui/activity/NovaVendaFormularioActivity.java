@@ -12,5 +12,6 @@ public class NovaVendaFormularioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nova_venda_formulario);
+        setTitle("Nova Venda");
     }
 }

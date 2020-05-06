@@ -3,9 +3,12 @@ package br.com.caranovabrecho.minhasvendas.ui.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -31,6 +34,14 @@ public class ResumoDiaActivity extends AppCompatActivity {
         configuraData();
         configuraListaDeVendas();
         configuraValorTotalDeVendasDoDia();
+
+        FloatingActionButton botaoNovaVenda = findViewById(R.id.activity_resumo_dia_nova_venda_fab);
+        botaoNovaVenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ResumoDiaActivity.this, NovaVendaFormularioActivity.class));
+            }
+        });
     }
 
     private void configuraValorTotalDeVendasDoDia() {

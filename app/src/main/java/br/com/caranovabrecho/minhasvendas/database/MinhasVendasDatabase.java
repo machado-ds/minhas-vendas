@@ -24,6 +24,7 @@ public abstract class MinhasVendasDatabase extends RoomDatabase {
     public static MinhasVendasDatabase getInstance(Context context) {
         return Room
                 .databaseBuilder(context, MinhasVendasDatabase.class, NOME_BANCO_DE_DADOS)
+                .allowMainThreadQueries()
                 .build();
     }
 }
