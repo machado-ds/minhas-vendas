@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.IntroParaConfigFragment">
+
+    <TextView
+        android:id="@+id/fragment_intro_paragraph1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Antes de continuar, é necessário fazer uma configuração inicial."
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/fragment_intro_paragraph2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/fragment_intro_paragraph2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Preciso saber que quais os tipos de item que você vende. Por exemplo, se o seu negócio
+    vender roupas, você pode incluir Camiseta como um tipo e Vestido como outro tipo.
+    Se o seu negócio vender carros, você pode incluir SUVs como um tipo e Caminhonete como
+    outro tipo"
+        app:layout_constraintStart_toStartOf="@id/fragment_intro_paragraph1"
+        app:layout_constraintTop_toBottomOf="@id/fragment_intro_paragraph1"
+        app:layout_constraintEnd_toEndOf="@id/fragment_intro_paragraph1"
+        android:gravity=""/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

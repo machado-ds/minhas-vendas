@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class ResumoDiaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_dia);
+        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
         setTitle("Resumo do dia");
         configuraData();
         configuraListaDeVendas();
