@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragment.IntroParaConfigFragment">
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/fragment_intro_paragraph1"
-        android:layout_width="wrap_content"
+        android:id="@+id/fragment_intro_textview"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Antes de continuar, é necessário fazer uma configuração inicial."
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@id/fragment_intro_paragraph2"
+        android:layout_margin="10dp"
+        android:text="Antes de continuar, é necessário fazer uma configuração inicial. \n \nPreciso saber quais os tipos de item que você vende. Por exemplo, se o seu negócio
+vender roupas, você pode incluir Camiseta como um tipo e Vestido como outro tipo.
+Se o seu negócio vender carros, você pode incluir SUVs como um tipo e Caminhonete como
+outro tipo. \n \nNa tela seguinte, escreva um tipo no campo correspondente e toque no símbolo
+de cruz para adicionar o tipo. Quando terminar, toque em Concluir"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/fragment_intro_continuar_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal"/>
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/fragment_intro_paragraph2"
+    <Button
+        android:id="@+id/fragment_intro_continuar_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Preciso saber que quais os tipos de item que você vende. Por exemplo, se o seu negócio
-    vender roupas, você pode incluir Camiseta como um tipo e Vestido como outro tipo.
-    Se o seu negócio vender carros, você pode incluir SUVs como um tipo e Caminhonete como
-    outro tipo"
-        app:layout_constraintStart_toStartOf="@id/fragment_intro_paragraph1"
-        app:layout_constraintTop_toBottomOf="@id/fragment_intro_paragraph1"
-        app:layout_constraintEnd_toEndOf="@id/fragment_intro_paragraph1"
-        android:gravity=""/>
+        android:text="Continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fragment_intro_textview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/fragment_intro_textview"
+        app:layout_constraintTop_toBottomOf="@id/fragment_intro_textview"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

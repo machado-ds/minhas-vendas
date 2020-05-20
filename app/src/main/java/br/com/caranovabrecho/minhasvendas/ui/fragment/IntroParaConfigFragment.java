@@ -10,11 +10,15 @@ import android.view.ViewGroup;
 
 import br.com.caranovabrecho.minhasvendas.R;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class IntroParaConfigFragment extends Fragment {
 
     public IntroParaConfigFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
