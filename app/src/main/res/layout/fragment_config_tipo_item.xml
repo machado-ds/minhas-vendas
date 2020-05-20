@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/fragment_config_tipo_item_comando_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Insira o nome de um tipo de item que você vende:"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/fragment_config_tipo_item_input_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Ex: Camiseta"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_config_tipo_item_comando_textview"
+        app:layout_constraintEnd_toEndOf="@id/fragment_config_tipo_item_comando_textview"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_config_tipo_item_comando_textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <Button
+        android:id="@+id/fragment_config_tipo_item_botao_inserir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inserir"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/fragment_config_tipo_item_input_edittext"
+        app:layout_constraintEnd_toEndOf="@id/fragment_config_tipo_item_input_edittext"
+        app:layout_constraintTop_toBottomOf="@id/fragment_config_tipo_item_input_edittext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <Button
+        android:id="@+id/fragment_config_tipo_item_botao_continuar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_config_tipo_item_botao_inserir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="10dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
